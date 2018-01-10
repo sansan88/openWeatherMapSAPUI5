@@ -1,0 +1,31 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.qperior.ti.u02500.demo.openweatherOpenWeatherSample.controller.Main" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<SearchField width="100%" placeholder="Suchen" id="__field0" search="_onSearch"/>
+					<ObjectHeader title="{/country}" intro="{/city}" introActive="true" titleActive="true" id="__header0" icon="{/icon}" iconActive="true"/>
+					<Table items="{/items}" columns="{/cols}" id="__table0">
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text maxLines="0" text="{date}"/>
+									<Text maxLines="0" text="{temp}"/>
+									<Text maxLines="0" text="{units}"/>
+									<Text maxLines="0" text="{humidity}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<columns>
+							<Column>
+								<header>
+									<Label text="{name}"/>
+								</header>
+							</Column>
+						</columns>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
